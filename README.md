@@ -215,7 +215,7 @@ If you properly set up the route, and revisit *localhost:3000/signup* you may se
 [🖇️ Rendering by Default](http://guides.rubyonrails.org/layouts_and_rendering.html#rendering-by-default-convention-over-configuration-in-action)
 
 #### Step 3: The View
-The current error should say something about a *missing template*. Controller actions will always do one of two things, *render* something or *redirect* to another controller action that will then render something. If you do not tell a Rails controller action to do anything, it will, by default, try to render a file. Rails is very *opinionated* on what that file is looking for should be called and where it should be located. Since you are inside of the `Users` controller in an action called `new`, it will look for `views/users/new.html.erb`. Touch that file and put something, (anything really, an `<h1>Hello</h1>`, for example) in it so we can confirm it works. If you see what you wrote, you're good to move on.
+The current error should say something about a *missing template*. Controller actions will always do one of two things, *render* something or *redirect* to another controller action that will then render something. If you do not tell a Rails controller action to do anything, it will, by default, try to render a file. Rails is very *opinionated* on what that file is looking for should be called and where it should be located. Since you are inside of the `Users` controller in an action called `new`, it will look for `views/users/new.html.erb`. Create that `views/users/new.html.erb` file, and then put something, (anything really, an `<h1>Hello</h1>`, for example) in it so we can confirm it works. If you see what you wrote, you're good to move on.
 
 #### Step 4: The form
 
