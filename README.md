@@ -18,7 +18,7 @@ Create a new repository on Github, if you have a partner only one of you should 
 
 Don't forget to commit often and provide descriptive commit messages!
 
-TODO: link to how to add collaborator
+[🖇️ Github: Add A Collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
 
 ## Domain Modeling
 
@@ -31,7 +31,7 @@ The first step is to set up the domain. It is ok to take some time to thoroughly
  - The email and username should be unique.
  - You should use the `bcrypt` gem to handle user authentication. What should the column name be that stores encrypted passwords when using `bcrypt`?
 
-TODO: Link to bcrypt readings
+[🖇️ Rails & Bcrypt](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password)
 
 - #### `pictures` table
 
@@ -91,12 +91,12 @@ Create a few users and several tags. You may want to create some comments and as
 #### 🔎 Common Error Note:
 > If you try to run `rake db:seed` and you get an error saying that 'users' has no such column 'password', there is a single line you need to add to you `User` model. Take a look at the readings and documentation for `bcrypt` to see how to take care of this. What does adding this line do?
 
-TODO: link to bcrypt/has_secure_password
+[🖇️ Has Secure Password reading](https://github.com/learn-co-curriculum/has_secure_password_readme)
 
 #### 🔎 Common Error Note:
 > When you type `rails new` into your terminal and create a new rails project the version of Rails you are using will be Rails 5, you can check the version on your gemfile.  Most of the labs are using Rails 4. There are few minor differences, and in one in particular that may affect your ability to persist instances to the database. Read more here:
 
-TODO: link to rails 5 belongs_to optional true default thing blogpost
+[🖇️ Rails 5 Belongs_to](http://blog.bigbinary.com/2016/02/15/rails-5-makes-belong-to-association-required-by-default.html)
 
 ## Testing Associations in Rails Console
 
@@ -112,7 +112,9 @@ picture.comments
 
 As long as calling those methods return something and do not throw an error, they are likely correctly implemented, depending on your seed data they may return a full or empty collection. Double check that the results you are seeing make sense given your seed data.
 
-TODO: Link to AR documentation on all the methods you get with association macros
+Adding macro's such as `has_many` gives your class many different methods. Check out the AR documentation here:
+
+[🖇️ AR association macro auto-generated methods](http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html)
 
 ## Model Methods
 
@@ -133,7 +135,7 @@ Notice that you will see many SQL statements in the console. One SQL statement t
 
 Read the documentation for Ruby's sort_by and use it to return the three tag's with the most pictures.
 
-TODO: add link to ruby sort_by
+[🖇️ Ruby Enumerable: sort_by Documentation](https://apidock.com/ruby/Enumerable/sort_by)
 
 #### 🔎 Refactor Note:
  >This section provides details on how to optimize and refactor this method. First, get your implementation of the method working and move forward!  This would be something to revisit only if you have more time. For now, it is enough to understand why your implementation could stand to use some refactoring
@@ -144,11 +146,7 @@ TODO: add link to ruby sort_by
 
  > Think back to all of the complex queries you used when first learning SQL like `JOINS`, `GROUP BY` and `HAVING`, or `COUNT`.  You can use ActiveRecord to make these type of queries! This will be tricky. Check some of these resources and ask an instructor for help if you have the time to tackle this refactoring.
 
-TODO: S.O. link AR query to get back records with most of a has_many associations
-
-TODO: link to AR documentation
-
-TODO: add solution somewhere, this one is hard: `Tag.joins(:picture_tags).group("picture_tags.tag_id").order("count(picture_tags.tag_id) desc")`
+>[🖇️ Order by Count of a has_many association](http://stackoverflow.com/questions/16996618/rails-order-by-results-count-of-has-many-association)
 
 #### `Tag.trending`
 
@@ -177,9 +175,9 @@ If you looked at each comment, you could check if the picture that comment belon
 
 >Please do not let trying to refactor these methods halt your forward progress, keep pressing to get your MVP up and running.
 
-TODO: Link to AR .where
+> [🖇️ ActiveRecord where](https://apidock.com/rails/ActiveRecord/QueryMethods/where)
 
-TODO: Link to StackOverflow something like `Comment.where("picture_id IN (?)", self.picture_ids)`
+> [🖇️ ActiveRecord IN clause](http://stackoverflow.com/questions/10181864/ruby-activerecord-in-clause)
 
 ## One feature at a time
 
@@ -209,14 +207,12 @@ The router's job is to match up a request to a controller action, it says, "If t
 
 If you think about what the intended outcome is for signing **up**, it's another way of saying you want to create a new user. That's a straight-forward CRUD action on the `users` resource. So a request to '/signup' may get routed to the users controller. What is the controller action that generally indicates you intend to render a form to create a *new* resource?
 
-TODO: Link to sessions labs, amusement park
-
 #### Step 2: The Controller
 If you properly set up the route, and revisit *localhost:3000/signup* you may see something like:
 `uninitialized constant UsersController`. Solve that error and the next error will be:
 `The action 'new' could not be found for UsersController`. Resolve that error and before refreshing the page, take a guess what the next error will be.  What does that indicate Rails is *implicitly* trying to do here?
 
-TODO: Link to implicit rendering reading
+[🖇️ Rendering by Default](http://guides.rubyonrails.org/layouts_and_rendering.html#rendering-by-default-convention-over-configuration-in-action)
 
 #### Step 3: The View
 The current error should say something about a *missing template*. Controller actions will always do one of two things, *render* something or *redirect* to another controller action that will then render something. If you do not tell a Rails controller action to do anything, it will, by default, try to render a file. Rails is very *opinionated* on what that file is looking for should be called and where it should be located. Since you are inside of the `Users` controller in an action called `new`, it will look for `views/users/new.html.erb`. Touch that file and put something, (anything really, an `<h1>Hello</h1>`, for example) in it so we can confirm it works. If you see what you wrote, you're good to move on.
@@ -227,9 +223,11 @@ Since we are performing a CRUD action here, creating a user, `form_for` is the a
 
 If necessary, review how `form_for` works. What arguments does it take and how do we pass it the argument?
 
-TODO: Link to (several?) form_for resources
+[🖇️ Rails Forms reading](https://github.com/learn-co-curriculum/rails-forms-readme)
 
-TODO: Link to REST stuff
+[🖇️ Form_for lab](https://github.com/learn-co-curriculum/rails-form_for-lab)
+
+[🖇️ Validations with form_for](https://github.com/learn-co-curriculum/validations-with-form_for-rails)
 
 #### 🔎 Common Error Note:
 > You may get an error here, something like: `undefined method 'users_path'`. This is a little bit of a cryptic error.  Where were you trying to call the method `users_path`?
@@ -254,9 +252,12 @@ end
 Make sure you do, in fact, hit the pry, make sure the params have the correct fields.
 
 Things to look out for when creating a user:
- - TODO: Link to strong params
- - TODO: Link to validations (unique email and password)
- - Be sure that in addition to creating the new record, you set the set the user's id in the **session**. TODO: Link to session stuff
+ - [🖇️ Strong Param Basics](https://github.com/learn-co-curriculum/strong-params-basics)
+ - [🖇️ AR Validations](https://github.com/learn-co-curriculum/activerecord-validations-readme)
+ - [🖇️ Handling Validations in Controllers](https://github.com/learn-co-curriculum/validations-in-controller-actions-rails)
+ - Be sure that in addition to creating the new record, you set the set the user's id in the **session**.
+ - [🖇️ Rails Sessions](http://guides.rubyonrails.org/action_controller_overview.html#accessing-the-session)
+
 
 Upon successfully creating a user you should redirect to the user's show page. Add the appropriate route and controller action. For now, let's just display the user's username on the show page.
 
@@ -282,7 +283,7 @@ Here is some pseudo code
 
 This task may be easier by adding a helper method like `current_user` to the ApplicationController that will be accessible in all views and all controllers.
 
-TODO: Link to current_user helper method lab.
+[🖇️ Rails Controller Helper Methods](https://apidock.com/rails/AbstractController/Helpers/ClassMethods/helper_method)
 
 You'll want to implement the ability to destroy a session so you can test out that your conditional is working properly.
 
@@ -291,7 +292,7 @@ You'll want to implement the ability to destroy a session so you can test out th
 
 > Here, we want a link that when clicked goes to the destroy action in the sessions controller. The route to destroy a session should be a DELETE request to '/sessions'. How can you make an `<a>` tag send a delete request?  Try Googling something like, "rails link_to delete request"  
 
-TODO: Link to lab with destroying a session
+[🖇️ Sessions Controller Reading](https://github.com/learn-co-curriculum/sessions_controller_readme)
 
 You will need to add several routes (and controllers) to get this functioning properly. You may also want to add links to the pictures index page or tags index page that are always present.
 
@@ -304,13 +305,13 @@ The process detailed above of creating a `new` action which will show the user a
 The key differences:
  - `form_for` is designed for Creating and Updating resources (the C & U of CRUD). A user signing in, while creating a session, isn't exactly a CRUD action.  In this case it will be better to use `form_tag`.
 
- TODO: Link to form_tag resources
+ [🖇️ form_tag Documentation](https://apidock.com/rails/ActionView/Helpers/FormTagHelper/form_tag)
 
  - Since CRUD actions are not being performed on the user resource, the routes for signing-in will be handled by the SessionsController not the UsersController
 
  - Setting a session will be done similarly to above, but first the information the user entered will have to be *authenticated*.  Basically, what's stored in the database in the `password_digest` column isn't the literal or plain-text password that a user entered when signing up, but the result of running that password through an encryption function. When a user re-enters their password to sign in, twhat they entered must be run through that same encryption function to see if the encrypted result matches the encrypted result stored in the `password_digest` column.  That's what bcrypt's `authenticate` method does for you.
 
- TODO: Link to bcrypt authenticate stuff
+ [🖇️ Bcrypt Reading](https://github.com/learn-co-curriculum/has_secure_password_readme)
 
 ## User Show Page
 
@@ -329,7 +330,9 @@ It should include:
 
 > When objects are instances of a certain class, they get all the methods that class defines. The Collection_Proxy class is like a super-charged Array with a bunch of special methods.  You will actually be able to create new picture objects directly off of it with ActiveRecord's association builder methods. Read the documentation for these methods and see if you can clean up the code in your controller's that creates associated objects
 
-> TODO: Link to AR association builder docs
+> [🖇️ AR Association build](https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/build)
+
+> [🖇️ AR Association create](https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/create)
 
 Using your model methods, display the following:
 
