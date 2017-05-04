@@ -57,7 +57,7 @@ When working on labs the rspec tests go through the steps of creating some data 
 
 Since there are no rspec tests here, it will be extra important to add some seed data. You could open up Rails Console and type in `Category.create`, `User.create`, etc. and this would in fact persist the newly created instances. The problem with doing this through Rails Console is that you will have no way to repeat or reproduce the steps you went through to add the records to the db.
 
-What if someone else wanted to clone down your repository and have some data to work with, or what if at some point you wanted to reset your database.  All the data you created would have to be manually re-entered, not too fun.  Wouldn't it be great if there was a single command that would create all the seed data we needed.
+What if someone else wanted to clone down your repository and have some data to work with, or what if at some point you wanted to reset your database (clear all data from the tables, and start from scratch)?  All the data you created would have to be manually re-entered, not too fun.  Wouldn't it be great if there was a single command that would create all the seed data we needed.
 
 Well there is! The place to add the code that will get run with the `rake db:seed` command is the seed file (found at `db/seeds.rb`).
 
