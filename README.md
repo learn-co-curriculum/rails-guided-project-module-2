@@ -28,7 +28,7 @@ The first step is to set up the domain. It is ok to take some time to thoroughly
 
  You'll definitely need a `users` table, no surprise there.  
  - A user will need an email, username and a password
- - The email and username should be unique.
+ - The email and username should be unique.  Use a validation for this.
  - You should use the `bcrypt` gem to handle user authentication. What should the column name be that stores encrypted passwords when using `bcrypt`?
 
 [🖇️ Rails & Bcrypt](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password)
