@@ -1,4 +1,4 @@
-# Flatiron Immediate-gram
+# Flatiron Picture-gram
 
 ## Your Task
 Your task is to create a Rails app with full CRUD functionality.  The domain will be a picture sharing application in which you will be asked to deliver the following features:
