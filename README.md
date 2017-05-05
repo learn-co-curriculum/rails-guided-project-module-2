@@ -12,6 +12,13 @@ This reading will provide details on how to best proceed with this task. Followi
 
 Note that there are **no tests**.  Your goal is to use Behavior Driven Development to confirm that your code is doing what it should.  This means instead of running `rspec` or `learn` you should be running your code frequently:  Open up the `rails console` and confirm that your methods and associations work, run a local server with `rails server` and see that your app has the desired behavior.
 
+## Overview
+
+1. - [ ]  [Create a Repository](## Create a Repository)
+2.  - [ ]  [Set up the Domain](## Domain Modeling)
+3.   - [ ] [Give Yourself some Seed Data to Work with in Development](##Seeding your Database)
+
+
 ## Create a Repository
 
 Create a new repository on Github, if you have a partner only one of you should create the repo. The partner who does not own the repo should not make their own fork, but can clone down from the same remote repository. If the owner adds the partner as a collaborator (through the settings for the repository on Github) both partners can push changes to the same repository.
@@ -51,7 +58,7 @@ The first step is to set up the domain. It is ok to take some time to thoroughly
 
 The next step is to look at each of the models after you have ran the migrations. The `belongs_to` relationships were described above, it's up to you to add in the correct `has_many` and `has_many :through`s
 
-## Seeding your database
+## Seeding your Database
 
 When working on labs the rspec tests go through the steps of creating some data used to test out the functionality.  For example, there would be no way of checking if the pictures index page displayed the appropriate information if there were no pictures in the database.
 
@@ -332,7 +339,7 @@ It should include:
 
 > [🖇️ AR Association build](https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/build)
 
-> [🖇️ AR Association create](https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/create)
+  > [🖇️ AR Association create](https://apidock.com/rails/ActiveRecord/Associations/CollectionProxy/create)
 
 Using your model methods, display the following:
 
