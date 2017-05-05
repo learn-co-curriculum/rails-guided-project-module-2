@@ -14,9 +14,9 @@ Note that there are **no tests**.  Your goal is to use Behavior Driven Developme
 
 ## Overview
 
-1. - [ ]  [Create a Repository](## Create a Repository)
+1. [Create a Repository](## Create a Repository)
 2.  - [ ]  [Set up the Domain](## Domain Modeling)
-3.   - [ ] [Give Yourself some Seed Data to Work with in Development](##Seeding your Database)
+3. [Give Yourself some Seed Data to Work with in Development](##Seeding your Database)
 
 
 ## Create a Repository
