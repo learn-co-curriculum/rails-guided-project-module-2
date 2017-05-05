@@ -1,4 +1,4 @@
-# Flatiron Immediate-gram
+# Flatiron Picture-gram
 
 ## Your Task
 Your task is to create a Rails app with full CRUD functionality.  The domain will be a picture sharing application in which you will be asked to deliver the following features:
@@ -35,7 +35,7 @@ The first step is to set up the domain. It is ok to take some time to thoroughly
 
  You'll definitely need a `users` table, no surprise there.  
  - A user will need an email, username and a password
- - The email and username should be unique.
+ - The email and username should be unique.  Use a validation for this.
  - You should use the `bcrypt` gem to handle user authentication. What should the column name be that stores encrypted passwords when using `bcrypt`?
 
 [🖇️ Rails & Bcrypt](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password)
@@ -64,7 +64,7 @@ When working on labs the rspec tests go through the steps of creating some data 
 
 Since there are no rspec tests here, it will be extra important to add some seed data. You could open up Rails Console and type in `Category.create`, `User.create`, etc. and this would in fact persist the newly created instances. The problem with doing this through Rails Console is that you will have no way to repeat or reproduce the steps you went through to add the records to the db.
 
-What if someone else wanted to clone down your repository and have some data to work with, or what if at some point you wanted to reset your database.  All the data you created would have to be manually re-entered, not too fun.  Wouldn't it be great if there was a single command that would create all the seed data we needed.
+What if someone else wanted to clone down your repository and have some data to work with, or what if at some point you wanted to reset your database (clear all data from the tables, and start from scratch)?  All the data you created would have to be manually re-entered, not too fun.  Wouldn't it be great if there was a single command that would create all the seed data we needed.
 
 Well there is! The place to add the code that will get run with the `rake db:seed` command is the seed file (found at `db/seeds.rb`).
 
@@ -222,7 +222,7 @@ If you properly set up the route, and revisit *localhost:3000/signup* you may se
 [🖇️ Rendering by Default](http://guides.rubyonrails.org/layouts_and_rendering.html#rendering-by-default-convention-over-configuration-in-action)
 
 #### Step 3: The View
-The current error should say something about a *missing template*. Controller actions will always do one of two things, *render* something or *redirect* to another controller action that will then render something. If you do not tell a Rails controller action to do anything, it will, by default, try to render a file. Rails is very *opinionated* on what that file is looking for should be called and where it should be located. Since you are inside of the `Users` controller in an action called `new`, it will look for `views/users/new.html.erb`. Touch that file and put something, (anything really, an `<h1>Hello</h1>`, for example) in it so we can confirm it works. If you see what you wrote, you're good to move on.
+The current error should say something about a *missing template*. Controller actions will always do one of two things, *render* something or *redirect* to another controller action that will then render something. If you do not tell a Rails controller action to do anything, it will, by default, try to render a file. Rails is very *opinionated* on what that file is looking for should be called and where it should be located. Since you are inside of the `Users` controller in an action called `new`, it will look for `views/users/new.html.erb`. Create that `views/users/new.html.erb` file, and then put something, (anything really, an `<h1>Hello</h1>`, for example) in it so we can confirm it works. If you see what you wrote, you're good to move on.
 
 #### Step 4: The form
 
