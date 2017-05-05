@@ -374,8 +374,11 @@ The tag show page should display all the pictures associated with that tag.
 
 ## Extensions
 
-Likes Model
+#### ❤️ Likes ❤️
 
-Self-referential friends/followers relationship
+Wouldn't it be awesome if users could *like* other photos. Conceptually, a "like" belongs to the user who added the like and to the photo it was left on.  What columns does this indicate should be on a `likes table`? When a user clicks a button to like a photo, what's the CRUD action they are performing?
 
-More model methods- what? analytics? tags commonly used together, friend you comment on the most, etc.?
+#### Friends and/or Followers
+
+TODO: add some description
+Currently,
