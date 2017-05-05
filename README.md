@@ -14,14 +14,15 @@ Note that there are **no tests**.  Your goal is to use Behavior Driven Developme
 
 ## Overview
 
-1. - [] [Create a Repository](#create-a-repository)
-2. - [] [Set up the Domain](#domain-modeling)
-3. - [] [Add seed data](#seeding-your-database)
-4. - [] [Add Methods on the Models](#model-methods)
-5. - [] [User Authentication](#user-sign-up)
-6. - [] [User Show Page](#user-show-page)
-7. - [] [Picture Show and Index Pages](#picture-show)
-8. - [] [Tag Show and Index Pages](#tag-index-and-show)
+1. - [ ] [Create a Repository](#create-a-repository)
+2. - [ ] [Set up the Domain](#domain-modeling)
+3. - [ ] [Add seed data](#seeding-your-database)
+4. - [ ] [Add Methods on the Models](#model-methods)
+5. - [ ] [User Authentication](#user-sign-up)
+6. - [ ] [User Show Page](#user-show-page)
+7. - [ ] [Picture Show and Index Pages](#picture-show)
+8. - [ ] [Tag Show and Index Pages](#tag-index-and-show)
+9. - [ ] [Extensions and Bonus Features](#extensions)
 
 
 ## Create a Repository
