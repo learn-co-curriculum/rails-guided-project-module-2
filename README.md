@@ -377,7 +377,3 @@ The tag show page should display all the pictures associated with that tag.
 #### ❤️ Likes ❤️
 
 Wouldn't it be awesome if users could *like* other photos. Conceptually, a "like" belongs to the user who added the like and to the photo it was left on.  What columns does this indicate should be on a `likes table`? When a user clicks a button to like a photo, what's the CRUD action they are performing?
-
-#### Friends and/or Followers
-
-Currently,
