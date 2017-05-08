@@ -380,5 +380,4 @@ Wouldn't it be awesome if users could *like* other photos. Conceptually, a "like
 
 #### Friends and/or Followers
 
-TODO: add some description
 Currently,
